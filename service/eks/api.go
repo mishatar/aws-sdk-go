@@ -8088,6 +8088,8 @@ type LegacyClusterParams struct {
 
 	// MasterConfig is a required field
 	MasterConfig *MasterConfig `locationName:"masterConfig" type:"structure" required:"true"`
+
+	UserDataConfig *UserDataConfig `locationName:"userDataConfig" type:"structure"`
 }
 
 // String returns the string representation.
@@ -9064,6 +9066,13 @@ type MasterConfig struct {
 
 	// MastersVolumeType is a required field
 	MastersVolumeType *string `locationName:"mastersVolumeType" type:"string" required:"true"`
+}
+
+type UserDataConfig struct {
+	_ struct{} `type:"structure"`
+
+	UserData            *string `locationName:"userData" type:"string"`
+	UserDataContentType *string `locationName:"userDataContentType" type:"string"`
 }
 
 // String returns the string representation.
